@@ -1,0 +1,19 @@
+{
+    "intersystems.servers": {
+        "iris-basico": {
+            "webServer": {
+                "scheme": "http",
+                "host": "localhost",
+                "port": 52773
+            },
+            "description": "instancia IRIS para webinar",
+            "username": "superuser"
+        }
+    },
+    "objectscript.conn": {
+        "server": "iris-basico",
+        "ns": "USER",
+        "active": true
+    },
+    "workbench.colorTheme": "InterSystems Default Dark"
+}
