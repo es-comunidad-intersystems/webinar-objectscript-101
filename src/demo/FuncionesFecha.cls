@@ -12,4 +12,10 @@ ClassMethod EjemploFechas() As %Status
     write $ZDATETIMEH("2000-01-01 10:02:03",3), !
 }
 
+/// Description
+ClassMethod EjemploDate() As %Date
+{
+    Return $HOROLOG
+}
+
 }

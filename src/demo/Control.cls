@@ -39,4 +39,15 @@ ClassMethod EjemploBucle(hasta As %Integer)
     }
 }
 
+/// Quit versus return
+ClassMethod quit1() As %Integer
+{
+    for iterador=1:1:10 {
+        write "ejecución For "_iterador,!
+        if (iterador=5) quit
+    }
+    write "aun no terminamos",!
+    return 0
+}
+
 }
