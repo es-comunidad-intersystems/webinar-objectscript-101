@@ -108,8 +108,6 @@ El comando `do` sirve para ejecutar un método, pero si ese método devuelve un 
 set variable = ##class(paquete.Clase).Metodo()
 ```
 
-
-
 ## Macros  
 
 Se definen en un fichero que se debe guardar con extensión `inc`. Se declaran mediante `#define`. Ejemplo:
@@ -138,6 +136,41 @@ Class demo.UsoDeMacro
 }
 ```
 
+## Tipos de Datos
+
+Las variables se consideran siempre como un string hasta que se demuestre lo contrario. No se declaran sin embargo se puede informar sobre su tipo mediante la directiva `#dim`.
+
+Una varible puede contener un valor de tipo básico como `%String`, `%Integer`, `%Double`.
+
+```objectscript
+set a = "hola" // a es un string
+set a = 23     // a es un valor entero
+set a = 1.54   // a es un valor decimal
+```
+
+No existe true o false, se utiliza 1 y 0
+
+## Fechas
+
+Otro tipo de datos es el `%Date` y el `%DateTime`, el formato interno de las fechas en ObjectScript es `dias,segundos`. La fecha y hora del sistema se puede obtener mediante la variable especial `$horolog`. Si se necesita más precisión se puede utilizar la variable especial `$ZTIMESTAMP` (devuelve la fecha UTC como `dias,seguundos.milisegundos`)
+
+Para convertir desde el formato interno a un formato legible se utiliza `$ZDATE()` y `$ZDATETIME()`. Para convertir de un formato cadena al formato interno se utiliza `$ZDATEH()` y `$ZDATETMEH()`.
+
+## Procesando cadenas de texto
+
+Hay muchas funciones para tratar cadenas de texto, ejemplo:
+
+```objectscript
+    write "UPPERCASE:",$ZCONVERT(cadena,"U"),!
+    write "LOWERCASE:",$ZCONVERT(cadena,"L"),!
+    write "REEMPLAZAR CARÁCTERES:",$TRANSLATE(cadena,"o","0"),!
+    write "REEMPLAZAR CADENA":,$REPLACE(cadena,"que","un")
+    write "QUITAR ESPACIOS:",$TRANSLATE(cadena," "),!
+    write "HACER TRIM:",$ZSTRIP(cadena,"<>W"),!
+    write "EXTRAER DEL 5 al 15:",$EXTRACT(cadena,5,15),!
+    write "SEPARANDO POR ' ':",$PIECE(cadena," ",2),!
+```
+
 ## Operadores
 
 No hay precedencia de operadores *implicita*, es estricta de izquierda a derecha, hay que usar parentesis para obligar a evaluar en operaciones arimeticas y lógicas
@@ -163,39 +196,6 @@ set name=$SELECT(number=1:"one",number=2:"two",number=3:"three",1:"other")
 ```
 
 Para iterar tenemos el `for iterador=desde:paso:hasta {}` y el `while condicion {}` aunque podemos usar la postcondición `do {} while condicion`
-
-## Tipos de Datos
-
-Las variables se consideran siempre como un string hasta que se demuestre lo contrario. No se declaran sin embargo se puede informar sobre su tipo mediante la directiva `#dim`.
-
-Una varible puede contener un valor de tipo básico como `%String`, `%Integer`, `%Double`.
-
-```objectscript
-set a = "hola" // a es un string
-set a = 23     // a es un valor entero
-set a = 1.54   // a es un valor decimal
-```
-
-## Fechas
-
-Otro tipo de datos es el `%Date` y el `%DateTime`, el formato interno de las fechas en ObjectScript es `dias,segundos`. La fecha y hora del sistema se puede obtener mediante la variable especial `$horolog`. Si se necesita más precisión se puede utilizar la variable especial `$ZTIMESTAMP` (devuelve la fecha UTC como `dias,seguundos.milisegundos`)
-
-Para convertir desde el formato interno a un formato legible se utiliza `$ZDATE()` y `$ZDATETIME()`. Para convertir de un formato cadena al formato interno se utiliza `$ZDATEH()` y `$ZDATETMEH()`.
-
-## Procesando cadenas de texto
-
-Hay muchas funciones para tratar cadenas de texto, ejemplo:
-
-```objectscript
-    write "UPPERCASE:",$ZCONVERT(cadena,"U"),!
-    write "LOWERCASE:",$ZCONVERT(cadena,"L"),!
-    write "REEMPLAZAR CARÁCTERES:",$TRANSLATE(cadena,"o","0"),!
-    write "REEMPLAZAR CADENA":,$REPLACE(cadena,"que","un")
-    write "QUITAR ESPACIOS:",$TRANSLATE(cadena," "),!
-    write "HACER TRIM:",$ZSTRIP(cadena,"<>W"),!
-    write "EXTRAER DEL 5 al 15:",$EXTRACT(cadena,5,15),!
-    write "SEPARANDO POR ' ':",$PIECE(cadena," ",2),!
-```
 
 ## Objetos
 

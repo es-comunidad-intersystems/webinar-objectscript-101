@@ -50,4 +50,14 @@ ClassMethod quit1() As %Integer
     return 0
 }
 
+ClassMethod return1() As %Integer
+{
+    for iterador=1:1:10 {
+        write "ejecución For "_iterador,!
+        if (iterador=5) return 1
+    }
+    write "aun no terminamos",!
+    return 0
+}
+
 }
