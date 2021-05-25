@@ -1,5 +1,5 @@
 /// Description
-Class demo.ClaseInstanciable
+Class demo.ClaseInstanciable Extends %RegisteredObject
 {
 
 Property color As %String;

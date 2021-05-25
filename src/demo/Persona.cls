@@ -4,7 +4,7 @@ Class demo.Persona Extends %RegisteredObject
 
 Parameter departamento = "Contabilidad creativa";
 
-Property nombre As %String;
+Property nombre As %String(MAXLEN = "");
 
 Property "primer_apellido" As %String;
 
