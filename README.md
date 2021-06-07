@@ -253,7 +253,7 @@ d ##class(demo.Calculadora).DameUnNumeroAleatorio(.numero)
 
 Se suele utilizar las palabras clave `ByVal` y `ByRef` para informar si un parámetro se debe pasar por valor o por referencia, pero es meramente informativo.
 
-# Webinar de Persitencia
+# Webinar de Persistencia
 
 ## Esas cosas mágicas llamadas Globals
 
@@ -288,8 +288,8 @@ Los globals no necesitan pre-definir las dimensiones, se hace automáticamente
 
 Podemos utilizar números y cadenas como sub-índices
 
-- `set ^persona(1,”nombre”)="Rosa"`
-- `set ^persona(1,”apellido”)="Melano"`
+- `set ^persona(1,”nombre”)="Benito"`
+- `set ^persona(1,”apellido”)="Camelas"`
 
 Se almacenan como Sparse-Arrays no hay “huecos” libres entre nodos del árbol
 
