@@ -30,6 +30,9 @@ docker compose up
 Una vez tengamos la instancia levantada acceder al portal para cambiar la password del superusuario accediendo a
 [http://localhost:52773/csp/sys/UtilHome.csp](http://localhost:52773/csp/sys/UtilHome.csp)
 
+Vamos a usar VSCode y para ello tendremos que instalar este pack de extensiones:
+[InterSystems ObjectScript Extension Pack](https://marketplace.visualstudio.com/items?itemName=intersystems-community.objectscript-pack)
+
 Por último debemos configurar el fichero `.vscode/settings.json` para indicar a la extensión de VSCode Objectscript como conectarse a la instancia
 
 ```json
