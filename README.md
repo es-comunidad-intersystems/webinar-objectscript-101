@@ -9,8 +9,8 @@ docker pull store/intersystems/iris-community:2021.1.0.205.0
 ```
 La versión con el tiempo irá cambiando por lo que antes de ejecutar el comando anterior es mejor visitar Docker Hub
 
-[Imagen de IRIS Communitiy Edition](https://hub.docker.com/r/intersystems/iris-community) 
-[Imagen de IRIS For Healt Community Edition](https://hub.docker.com/r/intersystems/irishealth-community)
+- [Imagen de IRIS Communitiy Edition](https://hub.docker.com/r/intersystems/iris-community) 
+- [Imagen de IRIS For Healt Community Edition](https://hub.docker.com/r/intersystems/irishealth-community)
 
 luego tan solo debemos iniciar el contenedor. Una forma es utilizar docker-compose definiendo un fichero `yml` y especificando la imagen que queremos usar. No debemos olvidarnos de abrir el puerto `52773` al host para poder interactuar con la instancia.
 
